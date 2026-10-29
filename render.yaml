@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: zavod-volga-demo
+    runtime: static
+    buildCommand: echo ok
+    staticPublishPath: ./public
+    headers:
+      - path: /frames3/*
+        name: Cache-Control
+        value: public, max-age=604800
